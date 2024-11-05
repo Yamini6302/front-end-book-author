@@ -1,0 +1,57 @@
+{
+  "books": [
+    {
+      "id": "1",
+      "bookTitle": "The Great Gatsby",
+      "bookPrice": "100",
+      "authorId": 1
+    },
+    {
+      "id": "2",
+      "bookTitle": "To Kill a Mockingbird",
+      "bookPrice": "270",
+      "authorId": 2
+    },
+    {
+      "id": "3",
+      "bookTitle": "1984",
+      "bookPrice": "360",
+      "authorId": 2
+    },
+    {
+      "id": "4",
+      "bookTitle": "Moby Dick",
+      "bookPrice": "120",
+      "authorId": 3
+    },
+    {
+      "id": "5",
+      "bookTitle": "War and Peace",
+      "bookPrice": "180",
+      "authorId": 1
+    },
+    {
+      "id": "04b7",
+      "bookTitle": "The Vow",
+      "bookPrice": "690",
+      "authorId": "2"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "authorName": "F. Scott Fitzgerald",
+      "authorBio": "An American novelist and short story writer, widely regarded as one of the greatest American writers of the 20th century."
+    },
+    {
+      "id": "2",
+      "authorName": "Harper Lee",
+      "authorBio": "An American novelist, known for her book 'To Kill a Mockingbird', published in 1960."
+    },
+    {
+      "id": "3",
+      "authorName": "George Orwell",
+      "authorBio": "An English novelist and essayist, known for his novels '1984' and 'Animal Farm'."
+    }
+  ]
+}
