@@ -26,17 +26,13 @@ export default function AuthorList() {
 
   useEffect(() => {
     const filtered = allAuthors.filter((author) =>
-      author.authorName.toLowerCase().includes(searchStack) // Filter by author name
+      author.authorName.toLowerCase().includes(searchStack)
     );
     setFilteredAuthors(filtered);
   }, [searchStack, allAuthors]);
 
   function handleView(id) {
-    navigate(`/author-view/${id}`);
-  }
-
-  function handleEdit(id) {
-    navigate(`/author-edit/${id}`);
+    navigate(`/book-author/author-view/${id}`);
   }
 
   function handleDelete(id) {
@@ -80,8 +76,7 @@ export default function AuthorList() {
                 <td>{author.authorName}</td>
                 <td>
                   <button onClick={() => handleView(author.id)} className="btn btn-warning">View</button>
-                  <button onClick={() => handleEdit(author.id)} className="btn btn-primary m-3">Edit</button>
-                  <button onClick={() => handleDelete(author.id)} className="btn btn-danger m-1">Delete</button>
+                   <button onClick={() => handleDelete(author.id)} className="btn btn-danger m-1">Delete</button>
                 </td>
               </tr>
             ))

@@ -27,8 +27,10 @@ import BookAdd from "./components/book-author/book/BookAdd";
 import BookView from "./components/book-author/book/BookView";
 import BookEdit from "./components/book-author/book/BookEdit";
 import AuthorList from "./components/book-author/author/AuthorList";
-import AddAuthor from "./components/book-author/author/AuthorAdd";
+import AuthorAdd from "./components/book-author/author/AuthorAdd";
+import AuthorView from "./components/book-author/author/AuthorView";
 import HeaderBookAuthor from "./components/book-author/HeaderBookAuthor"; 
+
 
 function App() {
   return (
@@ -48,8 +50,9 @@ function App() {
             <Route path="add-book" element={<BookAdd />} />
             <Route path="book-view/:id" element={<BookView />} /> 
             <Route path="book-edit/:id" element={<BookEdit />} />
-            <Route path="authors" element={<AuthorList />} />
-            <Route path="add-author" element={<AddAuthor />} />
+            <Route path="author-list" element={<AuthorList />} />
+            <Route path="author-view/:id" element={<AuthorView />} /> 
+            <Route path="author-add" element={<AuthorAdd />} />
           </Route>
 
           <Route path="/training" element={<HeaderTraining />}>

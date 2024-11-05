@@ -16,20 +16,18 @@ export default function HeaderBookAuthor() {
                 Add Book
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/book-author/authors" className="nav-link">
+            <Link to="/book-author/author-list" className="nav-link">
                 Authors List
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/book-author/add-author" className="nav-link">
+                </Link>
+            <li>
+            <Link to="/book-author/author-add" className="nav-link">
                 Add Author
-              </Link>
+            </Link>
             </li>
           </ul>
         </div>
       </nav>
-      <Outlet />
+      <Outlet /> 
     </>
   );
 }

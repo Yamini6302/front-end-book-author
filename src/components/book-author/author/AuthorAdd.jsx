@@ -5,22 +5,28 @@ export default function AuthorAdd() {
   const navigate = useNavigate();
   const [authorData, setAuthorData] = useState({
     authorName: "",
-    authorBio: "",
+    biography: "",
   });
 
+  // Handle form input changes
   function handleFormChange(event) {
     setAuthorData({ ...authorData, [event.target.name]: event.target.value });
   }
 
+  // Handle form submission
   function handleFormSubmit(event) {
     event.preventDefault();
+
+    // Submit the form to the backend API
     fetch("http://localhost:3000/authors", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(authorData),
-    }).then(() => navigate("/authors"));
+      body: JSON.stringify(authorData), // Send the author data without `id`
+    })
+      .then(() => navigate("/book-author/author-list")) // Redirect to authors list after adding
+      .catch((error) => console.error("Error adding author:", error));
   }
 
   return (
@@ -47,16 +53,16 @@ export default function AuthorAdd() {
             </div>
 
             <div className="mb-3">
-              <label htmlFor="authorBio" className="form-label">
-                Author Bio:
+              <label htmlFor="biography" className="form-label">
+                Author Biography:
               </label>
               <textarea
-                id="authorBio"
-                name="authorBio"
+                id="biography"
+                name="biography"
                 className="form-control"
                 required
                 onChange={handleFormChange}
-                value={authorData.authorBio}
+                value={authorData.biography}
               />
             </div>
 
